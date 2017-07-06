@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImageService } from './image/shared/image.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Dipesh Shakya';
+  title = 'Photo Gallery';
 }

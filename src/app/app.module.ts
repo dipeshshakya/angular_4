@@ -1,27 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AlertModule } from 'ngx-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
+import { ImageService } from './image/shared/image.service';
+import { ImageFilterPipe } from './image/shared/filter.pipe';
 import { AppComponent } from './app.component';
-import { MyComponentComponent } from './my-component/my-component.component';
-import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageComponent } from './image/image.component';
+import { ImageDetailComponent } from './image/image-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { appRoutes } from '../routes'
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent,
-    NavbarComponentComponent,
     GalleryComponent,
-    ImageComponent
+    ImageComponent,
+    NavbarComponent,
+      ImageDetailComponent,
+      ImageFilterPipe
   ],
   imports: [
     BrowserModule,
-    AlertModule.forRoot()
-
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
