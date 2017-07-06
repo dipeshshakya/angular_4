@@ -5,12 +5,16 @@ import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponentComponent,
-    NavbarComponentComponent
+    NavbarComponentComponent,
+    GalleryComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
